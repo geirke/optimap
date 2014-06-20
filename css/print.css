@@ -1,0 +1,232 @@
+/*
+Theme Name: OptiMap
+Theme URI: http://gebweb.net/optimap
+Description: The TSP Google Maps Optimizer Layout
+Version: 1.0
+*/
+
+/* Center block equations */
+div.eq {
+    text-align: center;
+} 
+
+/* Align inline equations with parents content area */
+span.eq img {
+    vertical-align: text-bottom;
+} 
+
+body {
+    font-size: 62.5%; /* Resets 1em to 10px */
+    text-align: center;
+    background: #ffffff;
+    border: none;
+    color: #333;
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.0em;
+    color: #0000a0;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #0000a0;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+p a:visited {
+    color: #0000a0;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+h1 {
+    padding-top: 70px;
+    margin: 0;
+}
+
+h2 {
+    margin: 5px 0 15px 0;
+}
+
+table.round {
+    margin-left: auto;
+    margin-right: auto;    
+    border: thin none black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.round td {
+    padding: 0;
+}
+
+table.round td.ul {
+    height: 7px;
+    width: 7px;
+}
+
+table.round td.u {
+    height: 7px;
+    width: 640px;
+}
+
+table.round td.ur {
+    height: 7px;
+    width: 7px;
+}
+
+table.round td.l {
+    width: 7px;
+}
+
+table.round td.m {
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff; 
+    width: 640px;
+}
+
+table.round td.r {
+    width: 7px;
+}
+
+table.round td.ll {
+    height: 7px;
+    width: 7px;
+}
+
+table.round td.lower {
+    height: 7px;
+    width: 640px;
+}
+
+table.round td.lr {
+    height: 7px;
+    width: 7px;
+}
+
+table.round tr.roundborder {
+    height: 7px;
+}
+
+div.my_textual_div {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.myMap {
+    width: 600px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.myButton {
+    width: 0px;
+    height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div.pathData {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table.gebddir {
+    text-align: left;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;    
+    border: thin none black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.gebddir td {
+    padding: 0;
+}
+
+table.gebddir tr.heading {
+    height: 40px;
+}
+
+table.gebddir tr.text {
+    height: 30px;
+}
+
+table.gebddir td.heading {
+    background: #a7a7a7;
+    margin-left: 10px;
+}
+
+table.gebddir td.even {
+    background: #fff;
+}
+
+table.gebddir td.odd {
+    background: #e7e7e7;
+}
+
+div.centered-directions {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #a7a7a7;
+}
+
+div.left-shift {
+    margin-right: 40px;
+    margin-top: auto;
+    text-align: right;
+}
+
+div.right-shift {
+    margin-left: 40px;
+}
+
+span.red {
+    color: #ca0000;
+}
+
+div#instructionBox {
+    display: none;
+}
+
+div#moreBox {
+    display: none;
+}
+
+div#thankBox {
+    display: none;
+}
+
+div#buttonArea {
+    display: none;
+}

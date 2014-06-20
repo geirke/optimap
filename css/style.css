@@ -1,0 +1,271 @@
+/*
+Theme Name: OptiMap
+Theme URI: http://gebweb.net/optimap
+Description: The TSP Google Maps Optimizer Layout
+Version: 2.0
+*/
+
+body {
+    background: #fff;
+    border: none;
+    color: #333;
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+    font-size: 10pt;
+}
+
+h1 {
+    font-size: 18pt;
+    text-align: left;
+    color: #0000a0;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: left;
+    color: #0000a0;
+}
+
+p a:visited {
+    color: #0000a0;
+}
+
+a {
+    color: #0000a0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0000a0;
+    text-decoration: underline;
+}
+
+h1 {
+    padding-top: 70px;
+    margin: 0;
+}
+
+h2 {
+    margin: 5px 0 15px 0;
+}
+
+table.mainTable {
+    width: 100%;
+}
+
+table.mainTable td.right {
+    width: 100%;
+}
+
+table.buttonTable {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border: thin none black;
+    border-collapse: collapse;
+    border-spacing: 10px;
+}
+
+table.buttonTable td {
+    height: 30px;
+    width: 100px;
+}
+
+div.my_textual_div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.myMap {
+    width: 100%;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.myButton {
+    width: 100px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+div.pathData {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+table.gebddir {
+    text-align: left;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;    
+    border: thin none black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.gebddir td {
+    padding: 0;
+}
+
+table.gebddir tr.heading {
+    height: 40px;
+}
+
+table.gebddir tr.text {
+    height: 30px;
+}
+
+table.gebddir td.heading {
+    background: #a7a7a7;
+    margin-left: 10px;
+}
+
+table.gebddir td.even {
+    background: #fff;
+}
+
+table.gebddir td.odd {
+    background: #e7e7e7;
+}
+
+div.centered-directions {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #a7a7a7;
+}
+
+div.left-shift {
+    margin-right: 40px;
+    margin-top: auto;
+    text-align: right;
+}
+
+div.right-shift {
+    margin-left: 40px;
+}
+
+div.middleCell {
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+
+span.red {
+    color: #ca0000;
+}
+
+textarea {
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 180pt;
+}
+
+input.calcButton {
+    width: 200pt;
+}
+
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#sortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 0.75em;
+    text-align: left;
+}
+
+ul.unsortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul.unsortable li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em;
+    padding-left: 1.5em;
+    font-size: 0.75em;
+    text-align: left;
+}
+
+table.dragTable td {
+    vertical-align: middle;
+}
+
+table.dragTable td.left {
+    width: 27px;
+}
+
+table.dragTable td.middle {
+    width: 200px;
+}
+
+table.dragTable td.right {
+    width: 27px;
+}
+
+button.ui-button-icon-only {
+    height: 100%;
+}
+
+#donateDiv {
+    margin-top: 10pt;
+}
+
+#socialShare {
+    margin-top: 10pt;
+}
+
+#googlePlusShare {
+    margin-top: 0pt;
+}
+
+#facebookShare {
+    margin-top: 5pt;
+}
+
+#linkedInShare {
+    margin-top: 8pt;
+}
+
+#twitterShare {
+    margin-top: 5pt;
+}
+
+#flattrDonate {
+    margin-top: 0pt;
+}
+
+#paypalDonate {
+    margin-top: 5pt;
+}
+
+div.poll {
+    padding: 5px;
+    background: #fdf5ce;
+    border: 1px solid #fbd850;
+    border-radius: 4px;
+}
