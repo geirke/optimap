@@ -16,8 +16,6 @@ span.eq img {
 } 
 
 body {
-    font-size: 62.5%; /* Resets 1em to 10px */
-    text-align: center;
     background: #ffffff;
     border: none;
     color: #333;
@@ -27,11 +25,11 @@ body {
 h1, h2, h3 {
     font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
 }
 
 p {
-    text-align: center;
+    text-align: left;
 }
 
 h1 {
@@ -71,75 +69,14 @@ h2 {
     margin: 5px 0 15px 0;
 }
 
-table.round {
-    margin-left: auto;
-    margin-right: auto;    
-    border: thin none black;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-table.round td {
-    padding: 0;
-}
-
-table.round td.ul {
-    height: 7px;
-    width: 7px;
-}
-
-table.round td.u {
-    height: 7px;
-    width: 640px;
-}
-
-table.round td.ur {
-    height: 7px;
-    width: 7px;
-}
-
-table.round td.l {
-    width: 7px;
-}
-
-table.round td.m {
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff; 
-    width: 640px;
-}
-
-table.round td.r {
-    width: 7px;
-}
-
-table.round td.ll {
-    height: 7px;
-    width: 7px;
-}
-
-table.round td.lower {
-    height: 7px;
-    width: 640px;
-}
-
-table.round td.lr {
-    height: 7px;
-    width: 7px;
-}
-
-table.round tr.roundborder {
-    height: 7px;
-}
-
 div.my_textual_div {
-    width: 700px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 div.myMap {
-    width: 600px;
+    width: 100%;
     height: 480px;
     margin-left: auto;
     margin-right: auto;
@@ -161,7 +98,7 @@ div.pathData {
 
 table.gebddir {
     text-align: left;
-    width: 600px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;    
     border: thin none black;
@@ -230,3 +167,40 @@ div#thankBox {
 div#buttonArea {
     display: none;
 }
+
+div#directionsControls {
+    display: none;
+}
+
+div#exportGoogle {
+    display: none;
+}
+
+div#reverseRoute {
+    display: none;
+}
+
+div#leftPanel {
+    display: none;
+}
+
+div#bulkLoader_hidden {
+    display: none;
+}
+
+div#exportData_hidden {
+    display: none;
+}
+
+div#durationsData_hidden {
+    display: none;
+}
+
+table.mainTable {
+    width: 100%;
+}
+
+table.mainTable td.left {
+    width: 0px;
+}
+

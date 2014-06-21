@@ -84,7 +84,7 @@ function formatDirections(gdir, mode) {
 	var colour = "g";
 	var number = i+1;
 	retStr += "\t<tr class='heading'><td class='heading' width=40>"
-	    + "<div class='centered-directions'><img src='icons/black"
+	    + "<div class='centered-directions'><img src='newicons/black"
 	    + number + ".png'></div></td>"
 	    + "<td class='heading'><div class='centered-directions'>";
 	var headerStr;
@@ -99,7 +99,7 @@ function formatDirections(gdir, mode) {
 	}
 	dragStr += "<li id='" + i + "' class='ui-state-"
 	  + (i ? "default" : "disabled") + "'>"
-	  + "<table class='dragTable'><tr><td class='left'><img src='icons/black"
+	  + "<table class='dragTable'><tr><td class='left'><img src='newicons/black"
 	  + number + ".png' /></td><td class='middle'>" + headerStr + "</td><td class='right'>"
 	  + (i ? "<button id='dragClose" + i + "' value='" + i + "'></button>" : "")
 	  + "</td></tr></table></li>"; 
@@ -130,11 +130,11 @@ function formatDirections(gdir, mode) {
 	    headerStr = latLng.toString();
 	}
 	dragStr += "<li id='" + 0 + "' class='ui-state-disabled'>"
-	  + "<table class='dragTable'><tr><td><img src='icons/black"
+	  + "<table class='dragTable'><tr><td><img src='newicons/black"
 	  + 1 + ".png' /></td><td>" + headerStr
 	  + "</td></tr></table></li>"; 
 	retStr += "\t<tr class='heading'><td class='heading'>"
-	    + "<div class='centered-directions'><img src='icons/black1.png'></div></td>"
+	    + "<div class='centered-directions'><img src='newicons/black1.png'></div></td>"
 	    + "<td class='heading'>"
 	    + "<div class='centered-directions'>" 
 	    + headerStr + "</div></td></tr>\n";
@@ -149,11 +149,11 @@ function formatDirections(gdir, mode) {
 	    headerStr = addr[order[gdir.legs.length]];
 	}
 	dragStr += "<li id='" + gdir.legs.length + "' class='ui-state-disabled'>"
-	  + "<table class='dragTable'><tr><td><img src='icons/black"
+	  + "<table class='dragTable'><tr><td><img src='newicons/black"
 	  + (gdir.legs.length + 1) + ".png' /></td><td>"
 	  + headerStr + "</td></tr></table></li>"; 
 	retStr += "\t<tr class='heading'><td class='heading'>"
-	    + "<div class='centered-directions'><img src='icons/black"
+	    + "<div class='centered-directions'><img src='newicons/black"
 	    + (gdir.legs.length + 1) + ".png'></div></td>"
 	    + "<td class='heading'>"
 	    + "<div class='centered-directions'>" 
@@ -269,7 +269,7 @@ function removeMarker(marker) {
 
 function drawMarker(latlng, addr, label, num) {
     var icon;
-    icon = new google.maps.MarkerImage("icons/red" + (num + 1) + ".png");
+    icon = new google.maps.MarkerImage("newicons/red" + (num + 1) + ".png");
     var marker = new google.maps.Marker({ 
         position: latlng, 
 	icon: icon, 
@@ -510,7 +510,7 @@ function onSolveCallback(myTsp) {
     // Add nice, numbered icons.
     if (mode == 1) {
 	var myPt1 = dir.legs[0].start_location;
-	var myIcn1 = new google.maps.MarkerImage("icons/black1.png");
+	var myIcn1 = new google.maps.MarkerImage("newicons/black1.png");
 	var marker = new google.maps.Marker({ 
             position: myPt1, 
 	    icon: myIcn1, 
@@ -522,9 +522,9 @@ function onSolveCallback(myTsp) {
 	var myPt1 = route.end_location;
 	var myIcn1;
 	if (i == dir.legs.length - 1 && mode == 0) {
-	    myIcn1 = new google.maps.MarkerImage("icons/black1.png");
+	    myIcn1 = new google.maps.MarkerImage("newicons/black1.png");
 	} else {
-	    myIcn1 = new google.maps.MarkerImage("icons/black" + (i+2) + ".png");
+	    myIcn1 = new google.maps.MarkerImage("newicons/black" + (i+2) + ".png");
 	}
 	var marker = new google.maps.Marker({
             position: myPt1,
