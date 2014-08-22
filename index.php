@@ -179,7 +179,7 @@ jQuery(function() {
 
 <body onLoad="onBodyLoad()">
 
-<h2>Experimental Route Optimizer</h2>
+<h2>Route Planner (Alpha)</h2>
 
 <table class='mainTable'>
 <tr>
