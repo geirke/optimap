@@ -19,11 +19,11 @@ body {
     background: #ffffff;
     border: none;
     color: #333;
-    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-family: Georgia, Verdana, Arial, Sans-Serif;
 }
 
 h1, h2, h3 {
-    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
     font-weight: bold;
     text-align: left;
 }

@@ -77,8 +77,8 @@ if (isset($_COOKIE['poll2Hidden'])) {
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-<meta itemprop="name" content="OptiMap">
-<meta itemprop="description" content="Fastest roundtrip solver and route planner with multiple destinations. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
+<meta itemprop="name" content="RouteOptimizer">
+<meta itemprop="description" content="Modified version of Optimap, an Open Source proejct. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <title>Multiple Destination Route Planner for Google Maps</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
@@ -196,10 +196,11 @@ jQuery(function() {
   <td class='left' style='vertical-align: top'>
   <div id="leftPanel">
   <div id="accordion" style='width: 300pt'>
-  <h3><a href="#" class='accHeader'>Destinations</a></h3>
+
+  <h3><a href="#" class='accHeader'>Enter Locations</a></h3>
   <div>
     <form name="address" onSubmit="clickedAddAddress(); return false;">
-    Add Location by Address: 
+    Add a Location by Address: 
     <table><tr><td><input name="addressStr" type="text"></td>
     <td><input type="button" value="Add!" onClick="clickedAddAddress()"></tr>
     </table>
@@ -208,7 +209,7 @@ jQuery(function() {
     <div id="bulkLoader"></div>
   </div>
 
-  <h3><a href="#" class='accHeader'>Route Options</a></h3>
+  <h3><a href="#" class='accHeader'>Calculate Route</a></h3>
   <div>
     <form name="travelOpts">
     <input id="walking" type="checkbox"/> Walking<br>
@@ -216,11 +217,19 @@ jQuery(function() {
     <input id="avoidHighways" type="checkbox"/> Avoid highways<br>
     <input id="avoidTolls" type="checkbox"/> Avoid toll roads
     </form>
+      <input id="button2" class="calcButton" type="button" value="Calculate Fastest A-Z Trip" onClick="directions(1, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].bicycling.checked, document.forms['travelOpts'].avoidHighways.checked, document.forms['travelOpts'].avoidTolls.checked)">
+      <input id="button1" class="calcButton" type="button" value="Calculate Fastest Roundtrip" onClick="directions(0, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].bicycling.checked, document.forms['travelOpts'].avoidHighways.checked, document.forms['travelOpts'].avoidTolls.checked)">
+      <input id='button3' class="calcButton" type='button' value='Start Over Again' onClick='startOver()'>
+  </div>
+  
+<h3><a href="#" class='accHeader'>Edit Route</a></h3>
+  <div>
+    <div id="routeDrag"></div>
+    <div id="reverseRoute"></div>
   </div>
 
   <h3><a href="#" class='accHeader'>Export</a></h3>
   <div>
-    <div id="exportGoogle"></div>
     <div id="exportDataButton"></div>
     <div id="exportData"></div>
     <div id="exportLabelButton"></div>
@@ -231,47 +240,33 @@ jQuery(function() {
     <div id="exportOrderData"></div>
     <div id="garmin"></div>
     <div id="tomtom"></div>
-    <div id="durations" class="pathdata"></div>
-    <div id="durationsData"></div>
+    <!--<div id="durations" class="pathdata"></div>
+    <div id="durationsData"></div>-->
   </div>
-
-  <h3><a href="#" class='accHeader'>Edit Route</a></h3>
-  <div>
-    <div id="routeDrag"></div>
-    <div id="reverseRoute"></div>
-  </div>
-
+  
   <h3><a href="#" class='accHeader'>Help</a></h3>
   <div>
   <p>To add locations, simply left-click the map or enter an address
   either in the single address field, or in the bulk loader. </p>
-  <p>The first location you add is considered to be the start 
-  of your journey. If you click 'Calculate Fastest Roundtrip', it will
-  also be the end of your trip. If you click 'Calculate Fastest A-Z Trip',
+  <p>The first location you add is considered to be the start
+  of your journey. If you click 'Calculate Fastest A-Z Trip',
   the last location (the one with the highest number), will be the final
-  destination.</p>
-  <p>To remove or edit a location, click its marker.</p>
+  destination. If you click 'Calculate Fastest Roundtrip', it will
+  also be the end of your trip.</p>
+  <p>To remove or edit a location, click that location's marker prior to calculating your route.</p>
   <p>If more than 15 locations are specified, you are not guaranteed
   to get the optimal solution, but the solution is likely to be close
   to the best possible.</p>
   <p>You can re-arrange
   stops after the route is computed. To do this, open the 'Edit Route'
   section and drag or delete locations.</p>
-  </div>
-
-  <p>
-   You can specify a default starting position and zoom level,
-   by adding http GET parameters center and zoom. E.g
+  <p>You can specify a default starting position and zoom level,by adding http GET parameters center and zoom. E.g
    <a href="http://gebweb.net/optimap/index.php?center=(60,10)&amp;zoom=6">http://gebweb.net/optimap/index.php?center=(60,10)&amp;zoom=6</a>.</p>
-  <p>Up to 100 locations are accepted.</p>
+  <p>Limit has been set to <b>100</b> locations at a time, as these calculations put a substantial load on the computer's resources.</p>
   </div>
   
   </div>
-
-  <input id="button1" class="calcButton" type="button" value="Calculate Fastest Roundtrip" onClick="directions(0, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].bicycling.checked, document.forms['travelOpts'].avoidHighways.checked, document.forms['travelOpts'].avoidTolls.checked)">
-  <input id="button2" class="calcButton" type="button" value="Calculate Fastest A-Z Trip" onClick="directions(1, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].bicycling.checked, document.forms['travelOpts'].avoidHighways.checked, document.forms['travelOpts'].avoidTolls.checked)">
-  <input id='button3' class="calcButton" type='button' value='Start Over Again' onClick='startOver()'>
-
+  </div>
   </div>
 
   </td>
