@@ -194,7 +194,7 @@ jQuery(function() {
 
 <body onLoad="onBodyLoad()">
 
-<h2>OptiMap - Fastest Roundtrip Solver</h2>
+<h2>Route Optimizer</h2>
 
 <table class='mainTable'>
 <tr>
