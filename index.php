@@ -274,19 +274,6 @@ if (!$hidePoll2) {
   section and drag or delete locations.</p>
   </div>
 
-  <h3><a href="#" class='accHeader'>About</a></h3>
-  <div>
-  <p><span class="red">Version 4</span>&nbsp;<a href="http://gebweb.net/blogpost/2012/01/25/optimap-version-4-is-here/">Read about the new
-  version, and post comments, bugs and suggestions</a>.
-  <p>How it works: <a href="http://gebweb.net/blogpost/2007/07/05/behind-the-scenes-of-optimap/">Behind the Scenes of OptiMap</a></p>
-  <p>Use on your website: <a href="http://gebweb.net/blogpost/2007/08/26/optimize-your-trips/">Optimize Your Trips</a></p>
-  <p>
-   The solver <a href="http://code.google.com/p/google-maps-tsp-solver/">
-   source code</a> is available under the MIT license. If you are
-   interested in
-   knowing about updates to this code, please subscribe to
-   <a href="http://groups.google.com/group/google-maps-tsp-solver">
-   this mailing list</a>.</p>
   <p>
    You can specify a default starting position and zoom level,
    by adding http GET parameters center and zoom. E.g
@@ -300,30 +287,6 @@ if (!$hidePoll2) {
   <input id="button2" class="calcButton" type="button" value="Calculate Fastest A-Z Trip" onClick="directions(1, document.forms['travelOpts'].walking.checked, document.forms['travelOpts'].bicycling.checked, document.forms['travelOpts'].avoidHighways.checked, document.forms['travelOpts'].avoidTolls.checked)">
   <input id='button3' class="calcButton" type='button' value='Start Over Again' onClick='startOver()'>
 
-<div id="socialShare">
-<div id="googlePlusShare">
-<g:plusone annotation="inline" width="400"></g:plusone>
-</div>
-
-<div id="facebookShare">
-<div class="fb-like" data-send="true" data-layout="button_count" data-width="400" data-show-faces="true" data-font="arial"></div>
-</div>
-
-<div id="twitterShare">
-<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-</div>
-
-</div>
-
-<div id="donateDiv">
-
-<div id="flattrDonate">
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.optimap.net"></a>
-<noscript><a href="http://flattr.com/thing/470626/OptiMap" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
-</div>
-
-  </div>
   </div>
 
   </td>
