@@ -196,16 +196,7 @@ jQuery(function() {
 <body onLoad="onBodyLoad()">
 
 <h2>OptiMap - Fastest Roundtrip Solver</h2>
-<?php
-if (!$hidePoll1) {
-  echo "<div class='poll'>
-  <a href='https://docs.google.com/forms/d/1Eb248Y0nGUFYDUbmeHo17WMpaAam_WlAYxzsPxTd2ds/viewform' target='_new'>I'd like to ask you a few questions about Optimap</a> -- Geir Engdahl 
-  (<a href='#' onClick='setPollHidden();'>dismiss</a>)</div>";
-}
-if (!$hidePoll2) {
-  echo "<div class='poll'>Thanks to everyone who answered the poll! Unfortunately, not enough people are interested in a Pro version right now. Don't worry, I'll continue to support and develop the free version -- Geir Engdahl (<a href='#' onClick='setPollHidden();'>dismiss</a>)</div>";
-}
-?>
+
 <table class='mainTable'>
 <tr>
   <td class='left' style='vertical-align: top'>
