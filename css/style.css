@@ -1,8 +1,8 @@
 /*
-Theme Name: OptiMap
+Theme Name: Tweaked from Optimap
 Theme URI: http://gebweb.net/optimap
 Description: The TSP Google Maps Optimizer Layout
-Version: 2.0
+Version: 2.0 tweaked heavily by Mica Cardillo
 */
 
 body {
@@ -229,4 +229,11 @@ table.dragTable td.right {
 
 button.ui-button-icon-only {
     height: 100%;
+}
+
+.routeoptimizertopbar {
+    font-size:1.7em;
+    color:black;
+}
+    
 }

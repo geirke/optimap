@@ -78,9 +78,9 @@ if (isset($_COOKIE['poll2Hidden'])) {
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
 <meta itemprop="name" content="RouteOptimizer">
-<meta itemprop="description" content="Modified version of Optimap, an Open Source proejct. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
+<meta itemprop="description" content="Modified version of Optimap, an Open Source project. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<title>Multiple Destination Route Planner for Google Maps</title>
+<title>Route Optimizer Using Google Maps</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
@@ -173,31 +173,21 @@ jQuery(function() {
 
 
 </script>
-<script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-    })();
-/* ]]> */</script>
 
 
 </head>
 
 <body onLoad="onBodyLoad()">
 
-<h2>Route Optimizer</h2>
+<h2>Experimental Route Optimizer</h2>
 
 <table class='mainTable'>
 <tr>
   <td class='left' style='vertical-align: top'>
   <div id="leftPanel">
-  <div id="accordion" style='width: 300pt'>
+  <div id="accordion" style='width:300pt'>
 
-  <h3><a href="#" class='accHeader'>Enter Locations</a></h3>
+  <h3><a href="#" class='accHeader'>1. Enter Locations</a></h3>
   <div>
     <form name="address" onSubmit="clickedAddAddress(); return false;">
     Add a Location by Address: 
@@ -209,7 +199,7 @@ jQuery(function() {
     <div id="bulkLoader"></div>
   </div>
 
-  <h3><a href="#" class='accHeader'>Calculate Route</a></h3>
+  <h3><a href="#" class='accHeader'>2. Calculate Route</a></h3>
   <div>
     <form name="travelOpts">
     <input id="walking" type="checkbox"/> Walking<br>
@@ -222,13 +212,13 @@ jQuery(function() {
       <input id='button3' class="calcButton" type='button' value='Start Over Again' onClick='startOver()'>
   </div>
   
-<h3><a href="#" class='accHeader'>Edit Route</a></h3>
+<h3><a href="#" class='accHeader'>3. Edit Route</a></h3>
   <div>
     <div id="routeDrag"></div>
     <div id="reverseRoute"></div>
   </div>
 
-  <h3><a href="#" class='accHeader'>Export</a></h3>
+  <h3><a href="#" class='accHeader'>4. Export Route Data</a></h3>
   <div>
     <div id="exportDataButton"></div>
     <div id="exportData"></div>
@@ -240,8 +230,8 @@ jQuery(function() {
     <div id="exportOrderData"></div>
     <div id="garmin"></div>
     <div id="tomtom"></div>
-    <!--<div id="durations" class="pathdata"></div>
-    <div id="durationsData"></div>-->
+    <div id="durations" class="pathdata"></div>
+    <div id="durationsData"></div>
   </div>
   
   <h3><a href="#" class='accHeader'>Help</a></h3>
