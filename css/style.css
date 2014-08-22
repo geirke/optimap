@@ -1,19 +1,19 @@
 /*
-Theme Name: OptiMap
+Theme Name: Tweaked from Optimap
 Theme URI: http://gebweb.net/optimap
 Description: The TSP Google Maps Optimizer Layout
-Version: 2.0
+Version: 2.0 tweaked heavily by Mica Cardillo
 */
 
 body {
     background: #fff;
     border: none;
-    color: #333;
-    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    color: #000;
+    font-family: Georgia, Verdana, Arial, Sans-Serif;
 }
 
 h1, h2, h3 {
-    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
     font-weight: bold;
     text-align: left;
 }
@@ -26,21 +26,21 @@ p {
 h1 {
     font-size: 18pt;
     text-align: left;
-    color: #0000a0;
+    color: purple;
 }
 
 h2 {
     font-size: 20pt;
     text-align: left;
-    color: #0000a0;
+    color: black;
 }
 
 p a:visited {
-    color: #0000a0;
+    color: #26EB4A;
 }
 
 a {
-    color: #0000a0;
+    color: #29BCF2;
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ div.my_textual_div {
 
 div.myMap {
     width: 100%;
-    height: 480px;
+    min-height: 440px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -231,41 +231,9 @@ button.ui-button-icon-only {
     height: 100%;
 }
 
-#donateDiv {
-    margin-top: 10pt;
+.routeoptimizertopbar {
+    font-size:1.7em;
+    color:black;
 }
-
-#socialShare {
-    margin-top: 10pt;
-}
-
-#googlePlusShare {
-    margin-top: 0pt;
-}
-
-#facebookShare {
-    margin-top: 5pt;
-}
-
-#linkedInShare {
-    margin-top: 8pt;
-}
-
-#twitterShare {
-    margin-top: 5pt;
-}
-
-#flattrDonate {
-    margin-top: 0pt;
-}
-
-#paypalDonate {
-    margin-top: 5pt;
-}
-
-div.poll {
-    padding: 5px;
-    background: #fdf5ce;
-    border: 1px solid #fbd850;
-    border-radius: 4px;
+    
 }

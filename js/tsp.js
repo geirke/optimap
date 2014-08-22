@@ -473,7 +473,6 @@ function onSolveCallback(myTsp) {
     document.getElementById("my_textual_div").innerHTML = formattedDirections[1];
     document.getElementById("garmin").innerHTML = createGarminLink(dir);
     document.getElementById("tomtom").innerHTML = createTomTomLink(dir);
-    document.getElementById("exportGoogle").innerHTML = "<input id='googleButton' value='View in Google Maps' type='button' class='calcButton' onClick='window.open(\"" + createGoogleLink(dir) + "\");' />";
     document.getElementById("reverseRoute").innerHTML = "<input id='reverseButton' value='Reverse' type='button' class='calcButton' onClick='reverseRoute()' />";
     jQuery('#reverseButton').button();
     jQuery('#rawButton').button();
