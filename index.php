@@ -30,7 +30,7 @@ if (isset($_GET['center'])) {
   }
 } 
 
-$zoom = 8;
+$zoom = 9;
 if (isset($_GET['zoom'])) {
   $zoom = $_GET['zoom'];
 }
@@ -90,7 +90,6 @@ if (isset($_COOKIE['poll2Hidden'])) {
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
 <?php
   echo "<script type=\"text/javascript\" src=\"js/BpTspSolver.js?" . filemtime("js/BpTspSolver.js") . "\"></script>\n";
-  echo "<script type=\"text/javascript\" src=\"js/directions-export.js?" . filemtime("js/directions-export.js") . "\"></script>\n";
   echo "<script type=\"text/javascript\" src=\"js/tsp.js?" . filemtime("js/tsp.js") . "\"></script>\n";
 ?>
 <script type="text/javascript">
@@ -154,18 +153,6 @@ jQuery(function() {
 	autoOpen: false
   });
   jQuery("#progressBar").progressbar({ value: 0 });
-  jQuery("#dialogTomTom" ).dialog({
-    height: 480,
-	width: 640,
-	modal: true,
-	autoOpen: false
-  });
-  jQuery("#dialogGarmin" ).dialog({
-    height: 480,
-	width: 640,
-	modal: true,
-	autoOpen: false
-  });
   jQuery('.myMap').height(jQuery(window).height() - 100);
 });
 
@@ -225,8 +212,6 @@ jQuery(function() {
     <div id="exportAddrData"></div>
     <div id="exportOrderButton"></div>
     <div id="exportOrderData"></div>
-    <div id="garmin"></div>
-    <div id="tomtom"></div>
     <div id="durations" class="pathdata"></div>
     <div id="durationsData"></div>
   </div>
@@ -248,7 +233,7 @@ jQuery(function() {
   stops after the route is computed. To do this, open the 'Edit Route'
   section and drag or delete locations.</p>
   <p>You can specify a default starting position and zoom level,by adding http GET parameters center and zoom. E.g
-   <a href="http://routeplanner.io/index.php?center=(60,10)&amp;zoom=6">http://routeplanner.io/optimap/index.php?center=(60,10)&amp;zoom=6</a>.</p>
+   <a href="http://routeplanner.io/index.php?center=(60,10)&amp;zoom=6">http://routeplanner.io/index.php?center=(60,10)&amp;zoom=6</a>.</p>
   <p>Limit has been set to <b>100</b> locations at a time, as these calculations put a substantial load on the computer's resources.</p>
   </div>
   
@@ -279,14 +264,6 @@ jQuery(function() {
 
 <div id="dialogProgress" title="Calculating route...">
 <div id="progressBar"></div>
-</div>
-
-<div id="dialogTomTom" title="Export to TomTom">
-<iframe name='tomTomIFrame' style='width: 580px; height: 400px'></iframe> 
-</div>
-
-<div id="dialogGarmin" title="Export to Garmin">
-<iframe name='garminIFrame' style='width: 580px; height: 400px'></iframe>
 </div>
 
 
