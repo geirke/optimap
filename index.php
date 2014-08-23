@@ -77,8 +77,8 @@ if (isset($_COOKIE['poll2Hidden'])) {
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-<meta itemprop="name" content="RouteOptimizer">
-<meta itemprop="description" content="Modified version of Optimap, an Open Source project. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
+<meta itemprop="name" content="RoutePlanner.io">
+<meta itemprop="description" content="RoutePlanner.io is a modified version of Optimap, an Open Source project. Up to 100 stops. Send computed route to TomTom or Garmin GPS.">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <title>Route Optimizer Using Google Maps</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
@@ -108,8 +108,6 @@ if (isset($_COOKIE['poll2Hidden'])) {
       echo "\t\tlatLng = new google.maps.LatLng(google.loader.ClientLocation.latitude, google.loader.ClientLocation.longitude);\n";
       echo "\t\tloadAtStart(google.loader.ClientLocation.latitude, google.loader.ClientLocation.longitude, " . $zoom . ");\n";
       echo "\t} else {\n";
-//$lat = "37.4419";
-//$lng = "-122.1419";
       echo "\t\tloadAtStart(37.4419, -122.1419, " . $zoom . ");\n";
       echo "\t}\n";
     }
@@ -179,14 +177,13 @@ jQuery(function() {
 
 <body onLoad="onBodyLoad()">
 
-<h2>Route Planner (Alpha)</h2>
-
+<div><h2>Route Planner (Alpha)</h2></div>
 <table class='mainTable'>
 <tr>
   <td class='left' style='vertical-align: top'>
   <div id="leftPanel">
+  <a href="javascript:window.print();">Print Page</a>
   <div id="accordion" style='width:300pt'>
-
   <h3><a href="#" class='accHeader'>1. Enter Locations</a></h3>
   <div>
     <form name="address" onSubmit="clickedAddAddress(); return false;">
@@ -251,7 +248,7 @@ jQuery(function() {
   stops after the route is computed. To do this, open the 'Edit Route'
   section and drag or delete locations.</p>
   <p>You can specify a default starting position and zoom level,by adding http GET parameters center and zoom. E.g
-   <a href="http://gebweb.net/optimap/index.php?center=(60,10)&amp;zoom=6">http://gebweb.net/optimap/index.php?center=(60,10)&amp;zoom=6</a>.</p>
+   <a href="http://routeplanner.io/index.php?center=(60,10)&amp;zoom=6">http://routeplanner.io/optimap/index.php?center=(60,10)&amp;zoom=6</a>.</p>
   <p>Limit has been set to <b>100</b> locations at a time, as these calculations put a substantial load on the computer's resources.</p>
   </div>
   
