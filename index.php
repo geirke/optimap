@@ -1,6 +1,6 @@
 <?php
-$addrTable;
-$nameTable;
+$addrTable=array();
+$nameTable=array();
 $num = 0;
 while (isset($_GET['loc' . $num])) {
   $loc = $_GET['loc' . $num];
