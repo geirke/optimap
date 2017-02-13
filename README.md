@@ -1,4 +1,4 @@
-optimap
+Route Planner
 =======
 
-Open Source Google Maps TSP solver
+Route Planner based on open source Optimap project
